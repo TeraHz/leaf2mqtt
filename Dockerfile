@@ -6,6 +6,7 @@ RUN apt-get update && \
 WORKDIR /app
 
 COPY pubspec.* ./
+RUN dart pub upgrade
 RUN dart pub get
 
 COPY . .
